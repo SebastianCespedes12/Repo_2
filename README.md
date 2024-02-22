@@ -41,6 +41,7 @@ A(Inicio)-->B[número entero n]
 
 ###Diagrama de flujo
 ```mermaid
+flowchart TD
 A(Inicio)
 ```
 
