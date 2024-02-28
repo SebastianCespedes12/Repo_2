@@ -1,5 +1,5 @@
 # Repo_2
-## Resultados reto #3Reto no. 3
+## Resultados reto #3
 >1.Plantear el algoritmo para obtener los números primos hasta n, usando pseudocódigo y diagramas de flujo.
 ### Pseudocódigo
 n : entero
