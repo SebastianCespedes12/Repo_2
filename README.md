@@ -1,13 +1,6 @@
 # Repo_2
 ## Resultados reto #3Reto no. 3
 >1.Plantear el algoritmo para obtener los números primos hasta n, usando pseudocódigo y diagramas de flujo.
-
-- Paso 1. Hacer una lista de numeros naturales desde 2 hasta n-1
-- Paso 2. Repetir para cada numero i de la lista 
-- Paso 2.1 Dividir por i cada numero de la lista, excepto si i mismo
-- Paso 2.2 Si el resultado de la division es un numero natural se descarta el dividendo
-- Paso 2.3 Sino, se mantiene en la lista
-
 ### Pseudocódigo
 n : entero
 i : entero 
