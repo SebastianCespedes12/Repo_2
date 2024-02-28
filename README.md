@@ -14,6 +14,11 @@ i :=2
     escribir ("es primo")
   i := i + 1
 Fin
+s
+s
+s
+s
+s
 ### Diagrama de flujo 
 ```mermaid
 flowchart TD
