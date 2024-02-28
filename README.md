@@ -3,22 +3,35 @@
 >1.Plantear el algoritmo para obtener los números primos hasta n, usando pseudocódigo y diagramas de flujo.
 
 - Paso 1. Hacer una lista de numeros naturales desde 2 hasta n-1
-- Paso 2. Repetir para cada numero i de la lista
-- Paso 2.1 Dividir por i cada numero de la lista
+- Paso 2. Repetir para cada numero i de la lista 
+- Paso 2.1 Dividir por i cada numero de la lista, excepto si i mismo
 - Paso 2.2 Si el resultado de la division es un numero natural se descarta el dividendo
 - Paso 2.3 Sino, se mantiene en la lista
-  Fin
+
 ### Pseudocódigo
 n : entero
 i : entero 
 inicio 
-  i:=2
+  i :=2
   Mientras (i<n) hacer
-   Si 
+ si el modulo(n,i)== 0 
+    escribir ("no es primo") 
+ sino 
+    escribir ("es primo")
+  i := i + 1
+Fin
 ### Diagrama de flujo 
 ```mermaid
 flowchart TD
 A(Inicio)-->B[número entero n]
+B-->C[lista de 2 hasta n-1]
+C-->D{i % n == 0?}
+D-->|no|E[Es primo]
+D-->|si|F[No es primo]
+E-->G[i+=1];F-->G
+G-->H{i < n?}
+H-->|si|D
+H-->|no|I(fin)
 ```
 >2.Revise el procedimiento matemático para hallar raíces cuadradas (son divisiones y restas), plantee el algoritmo en pseudocódigo y en diagrama de flujo.
 
