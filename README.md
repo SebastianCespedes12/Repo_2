@@ -1,11 +1,12 @@
 # Repo_2
 ## Resultados reto #3
 >1.Plantear el algoritmo para obtener los números primos hasta n, usando pseudocódigo y diagramas de flujo.
+
 ### Pseudocódigo
 n : entero
 i : entero 
 inicio 
-  i :=2
+i :=2
   Mientras (i<n) hacer
  si el modulo(n,i)== 0 
     escribir ("no es primo") 
