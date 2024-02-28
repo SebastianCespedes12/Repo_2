@@ -3,23 +3,21 @@
 >1.Plantear el algoritmo para obtener los números primos hasta n, usando pseudocódigo y diagramas de flujo.
 
 ### Pseudocódigo
+```pseudocode
 n : entero
-
 i : entero 
 
 inicio 
-
 i :=2
+  Mientras (i< n) hacer
+   si el modulo( n, i ) ==0 
+      escribir  ("no es primo") 
+   sino 
+      escribir ("es primo")
+i := i + 1
 
-  Mientras (i<n) hacer
-  
- si el modulo(n,i)== 0 
-    escribir ("no es primo") 
- sino 
-    escribir ("es primo")
-  i := i + 1
 Fin
-
+```
 ### Diagrama de flujo 
 ```mermaid
 flowchart TD
@@ -36,12 +34,10 @@ H-->|no|I(fin)
 >2.Revise el procedimiento matemático para hallar raíces cuadradas (son divisiones y restas), plantee el algoritmo en pseudocódigo y en diagrama de flujo.
 
 1. hacer lista de divisores primos de n
-2. Dividir el primer n por item de la lista
+2. Dividir n por el primer item de la lista
 3. dividir el cociente por el mismo item
-4. Repetetir hasta que el resultado no sea divisible por el mismo primo
-5. Pasar con el siguiente primo y dividir
-6. Si se puede continuar
-7. sino pasar al siguiente primo
+4. Repetetir hasta que el resultado no sea divisible por el item
+5. Pasar con el siguiente item y dividir
 8. repetir hasta que el dividendo sea uno
 9. tomar todos los divisores y multiplicarlos entre si
 10. Agrupar los que se puedan expresar como potencia de 2
@@ -51,7 +47,9 @@ H-->|no|I(fin)
 14. Fin
 
 ### Pseudocódigo
+```pseudocode
 
+```
 ###Diagrama de flujo
 ```mermaid
 flowchart TD
