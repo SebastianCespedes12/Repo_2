@@ -4,21 +4,22 @@
 
 ### Pseudocódigo
 n : entero
+
 i : entero 
+
 inicio 
+
 i :=2
+
   Mientras (i<n) hacer
+  
  si el modulo(n,i)== 0 
     escribir ("no es primo") 
  sino 
     escribir ("es primo")
   i := i + 1
 Fin
-s
-s
-s
-s
-s
+
 ### Diagrama de flujo 
 ```mermaid
 flowchart TD
