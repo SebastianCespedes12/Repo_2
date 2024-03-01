@@ -6,35 +6,42 @@
 ```pseudocode
 n : entero
 i : entero 
-
+j : entero
 inicio 
 i :=2
-  Mientras (i< n) hacer
-   si el modulo( n, i ) ==0 
-      escribir  ("no es primo") 
+Mientras (i< n) hacer
+  j:=2
+  Mientras (j<=i/2) hacer
+   si el modulo(i,j) ==0 
+      escribir  ("j no es primo") 
    sino 
-      escribir ("es primo")
+      escribir ("j es primo")
+   j := j + 1
 i := i + 1
-
 Fin
 ```
 ### Diagrama de flujo 
 ```mermaid
 flowchart TD
 A(Inicio)-->B[número entero n]
-B-->C[lista de 2 hasta n-1]
-C-->D{i % n == 0?}
-D-->|no|E[Es primo]
-D-->|si|F[No es primo]
-E-->G[i+=1];F-->G
-G-->H{i < n?}
-H-->|si|D
-H-->|no|I(fin)
+B-->C[i := 2]
+C-->D[j := 2]
+D-->E{j <= i / 2?}
+E-->|si|F{i % j == 0?}
+E-->|no|I
+F-->|no|G[No es primo]
+F-->|si|H[Es primo]
+G-->I[i += 1]
+H-->I
+I-->J[i < n?]
+J-->|si|K[j+= 1]
+K-->E
+J-->|no|L[Fin]
 ```
 >2.Revise el procedimiento matemático para hallar raíces cuadradas (son divisiones y restas), plantee el algoritmo en pseudocódigo y en diagrama de flujo.
 
 1. hacer lista de divisores primos de n
-2. Dividir n por el primer item de la lista
+2. Dividir n por el primer item i de la lista
 3. dividir el cociente por el mismo item
 4. Repetetir hasta que el resultado no sea divisible por el item
 5. Pasar con el siguiente item y dividir
@@ -48,6 +55,10 @@ H-->|no|I(fin)
 
 ### Pseudocódigo
 ```pseudocode
+n : entero
+i : entero
+lista de divisores primos para n
+  Mientras (n%i) != 0 hacer
 
 ```
 ###Diagrama de flujo
@@ -55,7 +66,5 @@ H-->|no|I(fin)
 flowchart TD
 A(Inicio)
 ```
-
->3.Cree un repositorio en github en donde muestre el desarrollo de la actividad y comparta el enlace por el canal de slack reto_3.
 
 
