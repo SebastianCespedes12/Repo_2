@@ -26,9 +26,9 @@ flowchart TD
 A(Inicio)-->B[número entero n]
 B-->M[Lista de 2 hasta n-1]
 M-->C[i := 2] 
-C-->D[j := 2]
 C-->N[Lista de i hasta i/2]
-N-->E{j <= i / 2?}
+N-->D[j := 2]
+D-->E{j <= i / 2?}
 E-->|si|F{i % j == 0?}
 E-->|no|I
 F-->|no|G[No es primo]
