@@ -40,31 +40,37 @@ J-->|no|L[Fin]
 ```
 >2.Revise el procedimiento matemático para hallar raíces cuadradas (son divisiones y restas), plantee el algoritmo en pseudocódigo y en diagrama de flujo.
 
-1. hacer lista de divisores primos de n
-2. Dividir n por el primer item i de la lista
-3. dividir el cociente por el mismo item
-4. Repetetir hasta que el resultado no sea divisible por el item
-5. Pasar con el siguiente item y dividir
-8. repetir hasta que el dividendo sea uno
-9. tomar todos los divisores y multiplicarlos entre si
-10. Agrupar los que se puedan expresar como potencia de 2
-11. Sino se mantiene igual
-12. A los numeros con potencia de 2 se les remueve la potencia y se multiplican entre si
-13. sino se escriben dentro de una raiz
-14. Fin
-
 ### Pseudocódigo
 ```pseudocode
+Inicio
 n : entero
 i : entero
-lista de divisores primos para n
-  Mientras (n%i) != 0 hacer
+p : entero 
+lista de divisores primos de n (i,...)
+lista de p veces que se utiliza cada divisor primo
 
+ Mientras (n > 1)
+        si (n % i) == 0
+            Aumentar en 1 la cantidad de veces que se utiliza i
+            n = n / i
+        sino
+         i = i + 1
+raiz = i**( p / 2), por cada divisores primo que se utilizo
+Fin
 ```
 ###Diagrama de flujo
 ```mermaid
 flowchart TD
-A(Inicio)
+A(inicio)-->B[lista de divisores primos de n]
+B-->C[lista de p veces que se utiliza cada divisor primo]
+C-->D{¿n>1?}
+D-->|si|E{¿n % i == 0?}
+E-->|si|F[Aumentar en 1 la cantidad de veces que se utiliza i]
+F-->G[n = n / i]
+G-->D
+E-->|no|H[i = i + 1]
+D-->|no|I["raiz = i**( p / 2)"]
+I-->J(Fin)
 ```
 
 
