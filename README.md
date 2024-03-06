@@ -24,9 +24,11 @@ Fin
 ```mermaid
 flowchart TD
 A(Inicio)-->B[número entero n]
-B-->C[i := 2]
+B-->M[Lista de 2 hasta n-1]
+M-->C[i := 2] 
 C-->D[j := 2]
-D-->E{j <= i / 2?}
+D-->N[Lista de i hasta i/2]
+N-->E{j <= i / 2?}
 E-->|si|F{i % j == 0?}
 E-->|no|I
 F-->|no|G[No es primo]
@@ -62,8 +64,10 @@ Fin
 ```mermaid
 flowchart TD
 A(inicio)-->B[lista de divisores primos de n]
-B-->C[lista de p veces que se utiliza cada divisor primo]
-C-->D{¿n>1?}
+B-->L[i:=2]
+L-->C[lista de p veces que se utiliza cada divisor primo]
+C-->M[p:=0]
+M-->D{¿n>1?}
 D-->|si|E{¿n % i == 0?}
 E-->|si|F[Aumentar en 1 la cantidad de veces que se utiliza i]
 F-->G[n = n / i]
